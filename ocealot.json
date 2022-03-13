@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26133
+        }
+      ],
+      "UpstreamPathTemplate": "/review/api/{path}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 14289
+        }
+      ],
+      "UpstreamPathTemplate": "/shkolla/api/{path}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "POST" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:50500"
+  }
+}
